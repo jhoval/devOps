@@ -16,4 +16,12 @@
          - php5-mysql
          - php5-cli
 
-         
+     - name: Install MySQL
+       apt:
+         name: "{{ item }}"
+         update_cache: yes
+         cache_valid_time: 86400
+         state: installed
+       with_items:
+         - mysql-server
+         - python-mysqldb
