@@ -25,3 +25,37 @@
        with_items:
          - mysql-server
          - python-mysqldb
+
+     - name: Remove anonymous users
+       mysql_user:
+         name: ""
+         state: absent
+
+     - name: Remove test database
+       mysql_db:
+         name: test
+         state: absent
+
+     - name: Generate new root password
+       command: openssl rand -hex 7 creates=/root/.my.cnf
+       register: mysql_root_password
+       # If /root/.my.cnf doesn't exist and the command is run
+     - debug: msg="New root password is {{ mysql_root_password.stdout }}"
+       when: mysql_root_password.changed
+       # If /root/.my.cnf exists and the command is not run
+     - debug: msg="No change to root password"
+       when: not mysql_root_password.changed
+
+     - name: Update root password
+       mysql_user:
+         name: root
+         host: "{{ item }}"
+         password: "{{ mysql_root_password.stdout }}"
+       with_items:
+         - "{{ ansible_hostname }}"
+         - 127.0.0.1
+         - ::1
+         - localhost
+
+     - name: Create my.cnf
+       template: src=templates/mysql/my.cnf dest=/root/.my.cnf
