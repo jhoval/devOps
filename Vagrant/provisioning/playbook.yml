@@ -4,13 +4,16 @@
      - name: Test machine
        ping:
 
-     - name: Update repositories cache and install "vim" package
+     - name: Install PHP
        apt:
          name: "{{ item }}"
          update_cache: yes
          cache_valid_time: 86400
-         state: present
+         state: installed
        with_items:
-         - curl
-         - vim
-         - htop
+         - php5
+         - php5-fpm
+         - php5-mysql
+         - php5-cli
+
+         
