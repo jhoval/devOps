@@ -1,7 +1,7 @@
 - hosts: all
   become: true
   tasks:
-     - name: Test machine
+     - name: Check instance ping
        ping:
 
      - name: Install PHP
@@ -9,42 +9,42 @@
          name: "{{ item }}"
          update_cache: yes
          cache_valid_time: 86400
-         state: installed
+         state: present
        with_items:
          - php5
          - php5-fpm
          - php5-mysql
          - php5-cli
 
-     - name: Install MySQL
+     - name: Install MySQL Server & python-mysqldb
        apt:
          name: "{{ item }}"
          update_cache: yes
          cache_valid_time: 86400
-         state: installed
+         state: latest
        with_items:
          - mysql-server
          - python-mysqldb
+
+     - name: Generate new root password
+       command: openssl rand -hex 7 creates=/root/.my.cnf
+       register: mysql_root_password
 
      - name: Remove anonymous users
        mysql_user:
          name: ""
          state: absent
+       when: mysql_root_password.changed
 
      - name: Remove test database
        mysql_db:
          name: test
          state: absent
-
-     - name: Generate new root password
-       command: openssl rand -hex 7 creates=/root/.my.cnf
-       register: mysql_root_password
-       # If /root/.my.cnf doesn't exist and the command is run
-     - debug: msg="New root password is {{ mysql_root_password.stdout }}"
        when: mysql_root_password.changed
-       # If /root/.my.cnf exists and the command is not run
-     - debug: msg="No change to root password"
-       when: not mysql_root_password.changed
+
+     - name: Output new root password
+       debug: msg="New root password is {{mysql_root_password.stdout}}"
+       when: mysql_root_password.changed
 
      - name: Update root password
        mysql_user:
@@ -56,6 +56,8 @@
          - 127.0.0.1
          - ::1
          - localhost
+       when: mysql_root_password.changed
 
      - name: Create my.cnf
        template: src=templates/mysql/my.cnf dest=/root/.my.cnf
+       when: mysql_root_password.changed
