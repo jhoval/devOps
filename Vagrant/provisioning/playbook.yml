@@ -61,3 +61,23 @@
      - name: Create my.cnf
        template: src=templates/mysql/my.cnf dest=/root/.my.cnf
        when: mysql_root_password.changed
+
+     - name: Install nginx
+       apt:
+         name: nginx
+         state: latest
+
+     - name: Start nginx
+       service:
+         name: nginx
+         state: started
+
+     - name: Create nginx config
+       template: src=templates/nginx/default.conf dest=/etc/nginx/sites-available/default
+       notify: Restart nginx
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
