@@ -6,7 +6,7 @@
        ping:
 
      - name: Install PHP
-       yum:
+       apt:
          name: "{{ item }}"
          update_cache: yes
          cache_valid_time: 86400
@@ -19,7 +19,7 @@
          - php-xml
 
      - name: Install MySQL Server & python-mysqldb
-       yum:
+       apt:
          name: "{{ item }}"
          update_cache: yes
          cache_valid_time: 86400
@@ -65,7 +65,7 @@
        when: mysql_root_password.changed
 
      - name: Install nginx
-       yum:
+       apt:
          name: nginx
          state: latest
 
@@ -86,7 +86,7 @@
          dest: /tmp/wordpress.zip
 
      - name: Install required tools
-       yum:
+       apt:
          name: "{{item}}"
          state: installed
        with_items:
