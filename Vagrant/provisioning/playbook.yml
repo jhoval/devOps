@@ -116,7 +116,7 @@
        mysql_user:
          name: wordpress
          host: localhost
-         password: Gl0b4nt!
+         password: WordpressDBu$er
          priv: wordpress.*:ALL
 
      - name: Create wp-config
