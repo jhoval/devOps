@@ -4,9 +4,10 @@
 Vagrant.configure("2") do |config|
 
   # config.vm.box = "hashicorp/precise64"
-  # config.vm.box = "xenial64"
-  config.vm.box = "mvbcoding/awslinux"
-  # config.vm.box = "awslinux"
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provision :shell, :privileged => false, :path => python.sh"
+
+
   #Configure ram
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
