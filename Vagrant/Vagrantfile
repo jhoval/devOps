@@ -4,7 +4,8 @@
 Vagrant.configure("2") do |config|
 
   # config.vm.box = "hashicorp/precise64"
-  config.vm.box = "xenial64"
+  # config.vm.box = "xenial64"
+  config.vm.box = "mvbcoding/awslinux"
 
   #Configure ram
   config.vm.provider "virtualbox" do |vb|
