@@ -11,4 +11,4 @@ Run `ansible-playbook -i vagrantInventory ./provisioning/playbook.yml`
 > Now if you go in your browser to 127.0.0.1:2222 you can see the last step of installing wordpress
 
 **Step 3**
-To test the infra, I used [TestInfra](https://testinfra.readthedocs.io/), with the following file: [test_ansible.py](testinfra/test_ansible.py)
+To test the infra, I used [TestInfra](https://testinfra.readthedocs.io/), with the following file: [test_ansible.py](Vagrant/testinfra/test_ansible.py)
