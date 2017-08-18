@@ -1,0 +1,264 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    90e54977-3e51-4e50-9eb9-33cec5b8441b:
+      size:
+        width: 510
+        height: 290
+      position:
+        x: -610
+        'y': -270
+      z: 0
+      embeds:
+        - b1b6051a-a7f0-426f-94db-114d402e5ac7
+        - 7a0c9469-ce25-412d-9f93-fd572771eeb1
+        - 3d5d4b88-8fd8-4794-b620-5843b7fa4864
+        - cf11e4d3-78df-4307-ae77-a5df68ebbf65
+    3d5d4b88-8fd8-4794-b620-5843b7fa4864:
+      size:
+        width: 200
+        height: 150
+      position:
+        x: -590
+        'y': -240
+      z: 1
+      parent: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+      embeds:
+        - a5aa533d-6d4a-4d72-af8b-371bc079fec8
+        - c4b12cea-8c28-4eef-a9e1-206d0f100a9b
+    7a0c9469-ce25-412d-9f93-fd572771eeb1:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -570
+        'y': -70
+      z: 1
+      parent: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+      embeds: []
+    b1b6051a-a7f0-426f-94db-114d402e5ac7:
+      size:
+        width: 140
+        height: 140
+      position:
+        x: -320
+        'y': -230
+      z: 1
+      parent: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+      embeds:
+        - 4cb75436-76eb-460e-8c5e-e34d2c4baf6a
+    4cb75436-76eb-460e-8c5e-e34d2c4baf6a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -300
+        'y': -200
+      z: 2
+      parent: b1b6051a-a7f0-426f-94db-114d402e5ac7
+      embeds: []
+      references:
+        - 14f58bc9-c265-4a6c-a15c-972d00324320
+    14f58bc9-c265-4a6c-a15c-972d00324320:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -10
+        'y': -170
+      z: 0
+      embeds: []
+    78330c82-3608-44f3-87e9-e2fd55c44d4b:
+      source:
+        id: 14f58bc9-c265-4a6c-a15c-972d00324320
+      target:
+        id: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+      z: 0
+    13c7a048-06a2-40ee-bd8e-9a743f832520:
+      source:
+        id: b1b6051a-a7f0-426f-94db-114d402e5ac7
+      target:
+        id: 3d5d4b88-8fd8-4794-b620-5843b7fa4864
+      z: 1
+    9093f28f-523f-4ada-8630-fbeabd8b4b36:
+      source:
+        id: 4cb75436-76eb-460e-8c5e-e34d2c4baf6a
+      target:
+        id: 14f58bc9-c265-4a6c-a15c-972d00324320
+      z: 5
+    a5aa533d-6d4a-4d72-af8b-371bc079fec8:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -570
+        'y': -210
+      z: 2
+      parent: 3d5d4b88-8fd8-4794-b620-5843b7fa4864
+      embeds: []
+      ismemberof:
+        - 7a0c9469-ce25-412d-9f93-fd572771eeb1
+      isrelatedto:
+        - 7a0c9469-ce25-412d-9f93-fd572771eeb1
+    b27482c4-b32a-4454-b6e3-a59158003695:
+      source:
+        id: a5aa533d-6d4a-4d72-af8b-371bc079fec8
+      target:
+        id: 7a0c9469-ce25-412d-9f93-fd572771eeb1
+      z: 6
+    805ee46c-b2ed-47ef-852d-082e595f7d36:
+      source:
+        id: b4a577c5-02c4-46b1-ab73-26f8fa5e3f17
+        selector: 'g:nth-child(1) g:nth-child(4) g:nth-child(3) circle:nth-child(1)     '
+        port: 'AWS::MembershipLInk-AWS::EC2::SecurityGroup-SecurityGroupIds'
+      target:
+        id: ab8d764d-a50d-4afd-aff1-7b80458c2bd5
+      z: 4
+    2b27db48-a09a-46f6-bfc8-53e78c045577:
+      source:
+        id: b4a577c5-02c4-46b1-ab73-26f8fa5e3f17
+        selector: 'g:nth-child(1) g:nth-child(4) g:nth-child(3) circle:nth-child(1)     '
+        port: 'AWS::MembershipLInk-AWS::EC2::SecurityGroup-SecurityGroupIds'
+      target:
+        id: ab8d764d-a50d-4afd-aff1-7b80458c2bd5
+      z: 4
+    c4b12cea-8c28-4eef-a9e1-206d0f100a9b:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -480
+        'y': -210
+      z: 2
+      parent: 3d5d4b88-8fd8-4794-b620-5843b7fa4864
+    cf11e4d3-78df-4307-ae77-a5df68ebbf65:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -480
+        'y': -70
+      z: 1
+      parent: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+Resources:
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.0.0.0/16
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 90e54977-3e51-4e50-9eb9-33cec5b8441b
+  Subnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.0.0/24
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3d5d4b88-8fd8-4794-b620-5843b7fa4864
+  securityGroupBastion:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref VPC
+      GroupDescription: Instance SG open 80 and 22 by default
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 7a0c9469-ce25-412d-9f93-fd572771eeb1
+  RouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref VPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b1b6051a-a7f0-426f-94db-114d402e5ac7
+  Route:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref RouteTable
+      GatewayId: !Ref InternetGW
+      DestinationCidrBlock: 0.0.0.0/0
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 4cb75436-76eb-460e-8c5e-e34d2c4baf6a
+  InternetGW:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 14f58bc9-c265-4a6c-a15c-972d00324320
+  EC2VPCG4X2OY:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      InternetGatewayId: !Ref InternetGW
+      VpcId: !Ref VPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 78330c82-3608-44f3-87e9-e2fd55c44d4b
+  EC2SRTA4KETQ:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref RouteTable
+      SubnetId: !Ref Subnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 13c7a048-06a2-40ee-bd8e-9a743f832520
+  Bastion:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: Bastion-maurofranchini
+      KeyName: mauro.franchini
+      ImageId: ami-3a674d5a
+      InstanceType: t2.nano
+      NetworkInterfaces:
+        - GroupSet:
+            - !Ref securityGroupBastion
+          AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          DeleteOnTermination: 'true'
+          SubnetId: !Ref Subnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: a5aa533d-6d4a-4d72-af8b-371bc079fec8
+  front01:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: front01-maurofranchini
+      KeyName: mauro.franchini
+      ImageId: ami-3a674d5a
+      InstanceType: t2.nano
+      NetworkInterfaces:
+        - GroupSet:
+            - !Ref securityGroupApp
+          AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          DeleteOnTermination: 'true'
+          SubnetId: !Ref Subnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c4b12cea-8c28-4eef-a9e1-206d0f100a9b
+  securityGroupApp:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref VPC
+      GroupDescription: Instance SG open 80 and 22 by default
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 10.0.0.0/24
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: cf11e4d3-78df-4307-ae77-a5df68ebbf65
