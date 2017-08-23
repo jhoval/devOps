@@ -1,0 +1,110 @@
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Aug 23, 2017 3:12:23 PM Main deleteWinstoneTempContents
+WARNING: Failed to delete the temporary Winstone file /tmp/winstone/jenkins.war
+Aug 23, 2017 3:12:23 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Logging initialized @310ms
+Aug 23, 2017 3:12:23 PM winstone.Logger logInternal
+INFO: Beginning extraction from war file
+Aug 23, 2017 3:12:24 PM org.eclipse.jetty.util.log.JavaUtilLog warn
+WARNING: Empty contextPath
+Aug 23, 2017 3:12:24 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: jetty-9.2.z-SNAPSHOT
+Aug 23, 2017 3:12:25 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Aug 23, 2017 3:12:25 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started w.@6cbcf243{/,file:/var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+Aug 23, 2017 3:12:25 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started ServerConnector@9ed238c{HTTP/1.1}{0.0.0.0:8080}
+Aug 23, 2017 3:12:25 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started @2097ms
+Aug 23, 2017 3:12:25 PM winstone.Logger logInternal
+INFO: Winstone Servlet Engine v2.0 running: controlPort=disabled
+Aug 23, 2017 3:12:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Aug 23, 2017 3:12:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Aug 23, 2017 3:12:26 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Aug 23, 2017 3:12:26 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Aug 23, 2017 3:12:26 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Aug 23, 2017 3:12:27 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Aug 23, 2017 3:12:27 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Download metadata
+Aug 23, 2017 3:12:27 PM jenkins.util.groovy.GroovyHookScript execute
+INFO: Executing /var/jenkins_home/init.groovy.d/tcp-slave-agent-port.groovy
+Aug 23, 2017 3:12:27 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Aug 23, 2017 3:12:27 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@3b02d266: display name [Root WebApplicationContext]; startup date [Wed Aug 23 15:12:27 UTC 2017]; root of context hierarchy
+Aug 23, 2017 3:12:27 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@3b02d266]: org.springframework.beans.factory.support.DefaultListableBeanFactory@2fcdd56c
+Aug 23, 2017 3:12:27 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2fcdd56c: defining beans [authenticationManager]; root of factory hierarchy
+Aug 23, 2017 3:12:28 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@1652281d: display name [Root WebApplicationContext]; startup date [Wed Aug 23 15:12:28 UTC 2017]; root of context hierarchy
+Aug 23, 2017 3:12:28 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@1652281d]: org.springframework.beans.factory.support.DefaultListableBeanFactory@42583e94
+Aug 23, 2017 3:12:28 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@42583e94: defining beans [filter,legacy]; root of factory hierarchy
+Aug 23, 2017 3:12:28 PM jenkins.install.SetupWizard init
+INFO: 
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+9367976fa96e47b58d4c77b96f92837a
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+--> setting agent port for jnlp
+--> setting agent port for jnlp... done
+Aug 23, 2017 3:12:47 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Download metadata. 20,295 ms
+Aug 23, 2017 3:12:48 PM hudson.model.UpdateCenter updateDefaultSite
+WARNING: Upgrading Jenkins. Failed to update the default Update Site 'default'. Plugin upgrades may fail.
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at hudson.model.DownloadService.loadJSON(DownloadService.java:172)
+	at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:190)
+	at hudson.model.UpdateCenter.updateDefaultSite(UpdateCenter.java:2194)
+	at jenkins.install.SetupWizard.init(SetupWizard.java:174)
+	at jenkins.install.InstallState$3.initializeState(InstallState.java:105)
+	at jenkins.model.Jenkins.setInstallState(Jenkins.java:1062)
+	at jenkins.install.InstallUtil.proceedToNextStateFrom(InstallUtil.java:96)
+	at jenkins.model.Jenkins.<init>(Jenkins.java:952)
+	at hudson.model.Hudson.<init>(Hudson.java:86)
+	at hudson.model.Hudson.<init>(Hudson.java:82)
+	at hudson.WebAppMain$3.run(WebAppMain.java:235)
+
+Aug 23, 2017 3:12:48 PM hudson.WebAppMain$3 run
+INFO: Jenkins is fully up and running
