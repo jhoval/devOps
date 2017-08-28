@@ -11,7 +11,4 @@
 		You are coming from
 		<%= request.getRemoteAddr()  %></p>
 
-	<p>
-		This words were deployed automatically
-	</p>
 </body>
