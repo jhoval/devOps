@@ -11,6 +11,6 @@
 		You are coming from
 		<%= request.getRemoteAddr()  %></p>
 	<p>
-	This words were deployed with a webhook
+	This words were deployed with a webhook vv2.0
 	</p>
 </body>
